@@ -7,6 +7,8 @@ import android.os.Bundle
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.constraintlayout.widget.ConstraintLayout
+import android.widget.Button
+
 
 class ResultActivity : AppCompatActivity() {
     companion object {
@@ -31,6 +33,9 @@ class ResultActivity : AppCompatActivity() {
                 setResult(Activity.RESULT_OK, errorIntent)
                 finish()
             }
+        }
+        findViewById<Button>(R.id.button_back).setOnClickListener {
+            finish()
         }
     }
 }
